@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  color: #e8e8e8;
+}
+p{
+  color: white;
+}
+.project:target{
+  scroll-margin-top: 76px;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 96, 1) 100%, rgba(0, 212, 255, 1) 100%);
+  font-style: roboto;
+
+
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(40, 5, 41);
+  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  width: 97%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+nav ul li {
+  list-style-type: none;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+
+}
+
+nav ul li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 3px;
+
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease;
+}
+
+
+nav ul li:hover {
+  color: rgba(255, 255, 255, 0.7);
+
+}
+
+nav ul li:hover::after {
+  background-color: rgba(255, 255, 255, 0.7);
+
+}
+
+
+img {
+  box-shadow: 10px 10px 4px 4px rgba(90, 6, 96, 0.725);
+  margin-top: 60px;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 20px;
+}
+
+.cont {
+  padding-top: 110px;
+}
+
+.cont h1 {
+  font-size: 40px;
+}
+
+span{
+  color: #1877F2;
+
+}
+
+.icon {
+  display: flex;
+  gap: 30px;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+
+.icon a {
+  text-decoration: none;
+  width: 65px;
+  height: 65px;
+  font-size: 20px;
+  border-radius: 50%;
+  border: 3px solid white;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  margin: 10px;
+  box-sizing: border-box;
+  position: relative;
+  animation: neonGlow 2s infinite alternate;
+  /* Continuous glow animation */
+}
+
+.icon a::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--glow-color),
+    0 0 30px var(--glow-color),
+    0 0 45px var(--glow-color),
+    0 0 60px var(--glow-color);
+  opacity: 1;
+  animation: neonGlow 2s infinite alternate;
+  /* Continuous glow animation */
+}
+
+/* Custom glow colors for each icon */
+.icon .instagram {
+  --glow-color: rgb(226, 66, 173);
+}
+
+.icon .facebook {
+  --glow-color: #1877F2;
+}
+
+.icon .github {
+  --glow-color: #333333;
+}
+
+.icon .whatsapp {
+  --glow-color: #25D366;
+}
+
+/* Glow pulsing animation */
+@keyframes neonGlow {
+  0% {
+    box-shadow: 0 0 10px var(--glow-color),
+      0 0 10px var(--glow-color),
+      0 0 10px var(--glow-color),
+      0 0 10px var(--glow-color);
+  }
+
+  100% {
+    box-shadow: 0 0 25px var(--glow-color),
+      0 0 20px var(--glow-color),
+      0 0 20px var(--glow-color),
+      0 0 20px var(--glow-color);
+  }
+}
+
+
+button {
+
+  --button_radius: 0.75em;
+  --button_color: #e8e8e8;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  margin-top: 40px;
+
+
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+  gap: 30px;
+}
+
+button:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+
+.about {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  margin-top: 70px;
+
+}
+
+.text p {
+  font-size: 25px;
+  margin-top: 35px;
+  padding-left: 30px;
+}
+
+.text h1 {
+  padding-left: 30px;
+  font-size: 50px;
+  margin-top: 40px;
+}
+
+.swyom1 {
+  box-shadow: 10px 10px 4px 4px rgba(90, 6, 96, 0.725);
+}
+
+/* From Uiverse.io by htwarriors108 */ 
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 60px;
+  flex-wrap: wrap; /* Ensures the cards wrap when there’s less space */
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project h1{
+  font-size:50px;
+  margin-top:60px;
+}
+
+.card {
+  margin-top: 40px;
+  position: relative;
+  width: 190px;
+  height: 254px;
+  color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensures content inside card is centered */
+  text-align: center; /* If there's text, this ensures it's centered */
+}
+
+
+.card:hover {
+  transform: translateY(-20px);
+}
+
+.card::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+  border-radius: 1.2em;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffbc00, #ff0058);
+  filter: blur(30px);
+}
+
+.card span {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  border-radius: 1em;
+}
+
+.card span::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.card .content {
+  position: relative;
+  padding: 10px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.5em;
+}
